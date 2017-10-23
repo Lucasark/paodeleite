@@ -1,19 +1,15 @@
 #include "help.h"
 
-/* Cria um novo no com chave k */
-Heap create() {
-	Heap h;
-	h.topo=-1;
-}
-int minValor(Heap h){
+int minValor(Heap h){//Retorna o menor valor O(1)
 
 }
-void insereValor(Heap *h, int n){
+void insereValor(Heap *h, int n){//Recursivo??? O(logn)
 
 }
-void criaHeap(Heap *h){
+void criaHeap(Heap *h){//???
 
 }
-void imprimeHeap(Heap h){
+void imprimeHeap(Heap h){///Imrprime o vetor O(n)
 
 }
+//rotações
