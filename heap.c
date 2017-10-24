@@ -1,7 +1,7 @@
 #include "heap.h"
 
 int minValor(Heap h){//Retorna o menor valor O(1)
-	return h.ID[1];
+	return h.elementos[1];
 }
 void insereValor(Heap *h, int n){//Recursivo??? O(logn)
 	return;
@@ -13,9 +13,9 @@ void criaHeap(Heap *h){//???
 void imprimeHeap(Heap h){///Imrprime o vetor O(n) - Em ordem cresente; 
 	return;
 }
-void ordernar(Heap *h){//Ornar vetor
+void ordernar(Heap *h){//Ordenar vetor
 	return;
 }
-void heapfy(Heap *h){//Heapfy
+void heapfy(int i, int n, Heap *h){//Heapfy
 	return;
 }

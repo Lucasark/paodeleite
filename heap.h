@@ -4,7 +4,7 @@
 #define MAX 10
 
 typedef struct heap {
-	int ID[MAX];//numero de elementos
+	int elementos[MAX];//numero de elementos
 	int last;
 } Heap;
 
