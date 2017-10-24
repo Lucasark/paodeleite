@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX 10
+
 typedef struct heap {
-	int elementos[MAX];
-	int topo;
+	int ID[MAX];//numero de elementos
+	int last;
 } Heap;
 
 int minValor(Heap h);

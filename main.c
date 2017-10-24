@@ -1,7 +1,8 @@
 #include "heap.h" 
 
 int main() {
-	criaHeap(h); //Verificar se está correto 
+	Heap h;
+	criaHeap(&h); //Verificar se está correto 
 	char op;
 	int k;
 	do {
@@ -12,7 +13,7 @@ int main() {
 		}
 		if (op = 'M'){ // M - Menor (Raiz)
 			printf("\n -------------------\n");
-			int aux = minHeap(h);
+			printf("%d \n", minHeap(h));
 			printf("\n -------------------\n");
 		}
 		if (op = 'P'){ // P - Mostrar Pilha (Arvore)
