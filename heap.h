@@ -12,4 +12,4 @@ int minValor(Heap h);
 void insereValor(Heap *h, int n);
 void criaHeap(Heap *h);
 void imprimeHeap(Heap h);
-//"rotações"
+void heapfy(int i, int n, Heap *h);

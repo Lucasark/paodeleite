@@ -11,14 +11,14 @@ int main() {
 			scanf("%d", &k);
 			insereValor(&h, k);
 		}
-		if (op = 'M'){ // M - Menor (Raiz)
+		if (op == 'M'){ // M - Menor (Raiz)
 			printf("\n -------------------\n");
-			printf("%d \n", minHeap(h));
+			printf("%d \n", minValor(h));
 			printf("\n -------------------\n");
 		}
-		if (op = 'P'){ // P - Mostrar Pilha (Arvore)
+		if (op == 'P'){ // P - Mostrar Pilha (Arvore)
 			printf("\n -------------------\n");
-			ImprimeHeap(h);
+			imprimeHeap(h);
 			printf("\n -------------------\n");
 		}
 	} while(op != 'S');
