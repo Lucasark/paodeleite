@@ -4,7 +4,7 @@ int main() {
 	Heap h;
 	criaHeap(&h); //Verificar se está correto 
 	char op;
-	int k;
+	int k, aux;
 	do {
 		scanf("%c", &op); 
 		if (op == 'I') { // I - Inserir
@@ -13,7 +13,8 @@ int main() {
 		}
 		if (op == 'M'){ // M - Menor (Raiz)
 			printf("\n -------------------\n");
-			printf("%d \n", minValor(h));
+			aux = minValor(h);
+			printf("%d \n", aux);
 			printf("\n -------------------\n");
 		}
 		if (op == 'P'){ // P - Mostrar Pilha (Arvore)
