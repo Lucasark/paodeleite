@@ -9,7 +9,7 @@ int minValor(Heap h){//Retorna o menor valor O(1)
 void insereValor(Heap *h, int n){//Recursivo??? O(logn)
 	h->last++;
 	h->elementos[h->last] = n;
-	heapfy(h->last, h->elementos[h->last], &h);
+	heapfy(h->last, h->elementos[h->last], h);
 	return;
 }
 void criaHeap(Heap *h){//???
@@ -28,12 +28,13 @@ void imprimeHeap(Heap h){///Imrprime o vetor O(n) - Em ordem cresente;
 }
 
 void heapfy(int i, int n, Heap *h){//Heapfy{Quantidade de elemento,Termo a ser analisado,Heap}
+	int aux;
 	if (n >= h->elementos[i/2]) return; //filho > pai
 	else{ //Senão sobe o filho
 		aux = n;
 		n = h->elementos[i/2];
 		h->elementos[i/2] = aux;
-		heapfy(sqrt(i), h->elementos[i/2], &h);
+		heapfy(sqrt(i), h->elementos[i/2], h);
 	}
 	return;
 }
