@@ -1,40 +1,32 @@
 #include "heap.h"
 
-int minValor(Heap h){//Retorna o menor valor O(1) 
-	if (h.last == 0){
-		return -1;
-	}
-	else return h.elementos[1];
+int minValor(Heap h){
+	return h.elementos[1];
 }
-void insereValor(Heap *h, int n){//Recursivo??? O(logn)
-	h->last++;
+void insereValor(Heap *h, int n){ // TESTE n = 2 i = 1 -- n = 3 i =2 
+	int i, aux, pai;
 	h->elementos[h->last] = n;
-	heapfy(h->last, h->elementos[h->last], h);
-	return;
-}
-void criaHeap(Heap *h){//???
-	h->last = 0;
-	return;
-}
-void imprimeHeap(Heap h){///Imrprime o vetor O(n) - Em ordem cresente;
-	if (h.last == 0){
-		printf("Arvore vazia\n");
-		return;
-	} 
-	for (int i=1; i<=h.last; i++){
-		printf("%d\n", h.elementos[i]);
+	i = h->last;// i = 1
+	pai = i/2; //pai = 0
+	while(pai>0 && i>0){ //F & T
+		if (h->elementos[i] < h->elementos[pai]){ //Troca de pai e filho
+			aux = h->elementos[pai];
+			h->elementos[pai]=h->elementos[i];
+			h->elementos[i] = aux;
+		}
+		i = pai; //Atualziado quem é o filho
+		pai = i/2;//Atualliza quem é pai
 	}
+	h->last++;//Da espaço para mais um elemento
 	return;
 }
-
-void heapfy(int i, int n, Heap *h){//Heapfy{Quantidade de elemento,Termo a ser analisado,Heap}
-	int aux;
-	if (n >= h->elementos[i/2]) return; //filho > pai
-	else{ //Senão sobe o filho
-		aux = n;
-		n = h->elementos[i/2];
-		h->elementos[i/2] = aux;
-		heapfy(sqrt(i), h->elementos[i/2], h);
+void criaHeap(Heap *h){ //Inicia o vetor om indice 1
+	h->last = 1;
+	return;
+}
+void imprimeHeap(Heap h){
+	for (int i=1; i<=(h.last - 1); i++){//Não acessar o vetor "previmente" criado
+		printf("%d - ", h.elementos[i]); // 2 - 3
 	}
 	return;
 }

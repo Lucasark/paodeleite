@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define MAX 10 // Tamanho maximo da Arvore Heap
+#define MAX 100 // Tamanho maximo da Arvore Heap
 
 typedef struct heap {
 	int elementos[MAX];//numero de elementos
